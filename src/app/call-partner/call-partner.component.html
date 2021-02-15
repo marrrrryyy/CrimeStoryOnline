@@ -1,0 +1,26 @@
+<h1>
+    Partner: “Did you figure out which of the items doesn't belong to our crime scene?”
+
+
+</h1>
+<h3>
+    Please choose the item that you think is wrongfully on the list:
+
+</h3>
+
+<form name="demo" action="">
+    <label for="items">Choose the item:</label>
+    <select name="items" id="items">
+      <option value="bloodyStone">Bloody Stone</option>
+      <option value="brokenWineGlass">Broken Wine Glass</option>
+      <option value="baseball" id="baseball" name="baseball">Baseball Bat and Ball</option>
+      <option value="brokenWindow">Broken Window Fragments</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit" >
+  </form>
+
+<button (click)="submitAnswer()">Confirm</button>
+
+<button name="confirm" [disabled]= "true" onclick="window.location.href='/problem-solved'" >Next Page</button>
+

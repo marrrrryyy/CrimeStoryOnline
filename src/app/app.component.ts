@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { getLocaleDayNames } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { StartComponent } from './start/start.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CrimeStoryOnline';
+  namePlayer = "";
+
 }
