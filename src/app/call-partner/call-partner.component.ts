@@ -13,14 +13,13 @@ export class CallPartnerComponent implements OnInit {
 
 
   constructor() { 
-    
   }
 
   ngOnInit(): void {
   }
   
   submitAnswer() {
-    if (this.baseball.nativeElement.innerHTML == "baseball") {
+    if (this.baseball.nativeElement.innerHTML === "baseball") {
       console.log("true");
     }
     
