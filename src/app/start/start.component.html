@@ -1,13 +1,19 @@
 
-<h1>
+<div class="text">
     Partner: “Hello, detective! Before we begin with today’s case.
-</h1>
-<h1>
+    <br>
+    <br>
     May I know your name?”
-</h1>
+</div>
+<p>Please write your name here and confirm:</p>
 
 <!-- 
 <input type="text" #box (keyup.enter)="onEnter(box.value)" /> -->
 
 <input ref-filter type='text' [(ngModel)]='listFilter' />
-<button class="btn btn-primary" [disabled]="listFilter === ''"(click)="ClearText()" onclick="window.location.href='/name'">Confirm</button>
+
+<section>
+    <div class="example-button-row">
+<button mat-raised-button color="primary" [disabled]="listFilter === ''"(click)="ClearText()" onclick="window.location.href='/name'">Confirm</button>
+</div>
+</section>

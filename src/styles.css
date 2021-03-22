@@ -1,1 +1,102 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+body {
+    background-color: #303030;
+    font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, label {
+    color: white;
+}
+div.text {
+    font-size: x-large;
+    color: white;
+    margin-bottom: 5%;
+    white-space: pre-line;
+}
+
+div.subtext {
+    font-size: large;
+    color: white;
+    margin-bottom: 2%;
+    
+}
+
+div.background-box{
+    background-color: #555555;
+    opacity: 80%;
+    padding: 2%;
+    border-radius: 4px;
+}
+
+button.mat-raised-button {
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size:x-large;
+}
+
+input {
+    font-size: x-large;
+}
+
+mat-radio-button {
+    font-size: x-large;
+    margin: 1%;
+}
+.mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  mat-accordion,mat-expansion-panel, mat-panel-title {
+    font-size: x-large;
+    margin: 1%;
+  }
+  mat-expansion-panel div {
+      background-color: #8d8d8d;
+      margin-top: 3%;
+      border-radius: 4px;
+  }
+
+
+select {
+    font-size: x-large;
+}
+
+
+section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 24px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    width: 690px;
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }

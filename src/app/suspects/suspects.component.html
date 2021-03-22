@@ -1,15 +1,19 @@
-<h1>
+<div class="text">
     Partner: “There are two suspects: Mr Bloomington, the husband, and Mr Shaw, the neighbour. 
-
+    <br>
+    <br>
     There seems no one else who knew the victim and had the opportunity and the motive to kill Mrs Bloomington.
+    <br>
+    <br>
+    About whom would you like to know more?”
     
-    About whom would you like to know more first?”
+</div>
+<section>
+    <div class="example-button-row">
+    <button mat-raised-button (click)="actionMethod($event)" onclick="window.location.href='/suspect-a'">Mr Bloomington</button>
+    <button mat-raised-button onclick="window.location.href='/suspect-b'">Mr Shaw</button>
+    <p>If you are finished with both suspects go further with the autopsy:</p>
+    <button mat-raised-button onclick="window.location.href='/autopsy'" color="primary" >Autopsy</button>
     
-
-
-</h1>
-<button onclick="window.location.href='/suspect-a'" (click)="actionMethod($event)" class="btn btn-primary">Mr Bloomington</button>
-<button onclick="window.location.href='/suspect-b'">Mr Shaw</button>
-
-<p>If you are finished with both suspects go further with the autopsy:</p>
-<button onclick="window.location.href='/autopsy'">Autopsy</button>
+</div>
+</section>

@@ -32,6 +32,8 @@ import { HowComponent } from './how/how.component';
 import { WhoComponent } from './who/who.component';
 import { EndComponent } from './end/end.component';
 import { FormsModule } from '@angular/forms';
+import { AppMaterialModule } from './app-material/app-material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -66,6 +68,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     FormsModule,
     BrowserModule,
+    AppMaterialModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     RouterModule.forRoot([
       { path: '', component: MenuComponent},

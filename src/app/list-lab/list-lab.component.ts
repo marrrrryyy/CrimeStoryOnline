@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListLabComponent implements OnInit {
 
+  viewMode = "hidden";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  loadList() {
+    this.viewMode = "visible";
   }
 
 }

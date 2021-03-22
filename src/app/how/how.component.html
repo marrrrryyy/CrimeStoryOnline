@@ -1,25 +1,36 @@
-<h1>
-    Partner: “Are you ready to arrest the suspect? To make sure we have the right one we have to know how the victim was murdered.
+<style>
+  .wrap-mat-radio-label {
+      white-space: normal;
+  }
+</style>
 
+<div class="text">
+    Partner: “Are you ready to arrest the suspect? To make sure we have the right one we have to know how the victim was murdered.
+    <br>
+    <br>
     So, can you tell me how the victim died?”
-    
-</h1>
-<h3>
-    Choose one of these options:
-</h3>
-<div>
-    <input type="radio" id="wineGlass" name="drone" value="wineGlass"
-           checked>
-    <label for="wineGlass">The victim was hit with a wine glass that was found near the body. </label>
-  </div>
-  
-  <div>
-    <input type="radio" id="stone" name="drone" value="stone">
-    <label for="stone">The victim was hit by a stone that was thrown through the window.</label>
-  </div>
-  
-  <div>
-    <input type="radio" id="baseballBat" name="drone" value="baseballBat">
-    <label for="baseballBat">The victim was hit with a baseball bat that was found in the hallway.</label>
-  </div>
-  <button onclick="window.location.href='/who'">Confirm</button>
+</div>
+<p>
+  Choose one of these options:
+</p>
+
+<mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  [(ngModel)]="selected">
+  <mat-radio-button class="example-radio-button" *ngFor="let item of items" [value]="item">
+    <span class="wrap-mat-radio-label">
+    {{item}}
+  </span>
+  </mat-radio-button>
+</mat-radio-group>
+<section>
+  <div class="example-button-row">
+  <button mat-raised-button (click)="checkAnswer(selected)" >Confirm</button>
+</div>
+</section>
+
+<div [hidden] = "answer == 'wrong'">
+  <p>Yes! This was the right answer! You can go to the next page:</p>
+  <button mat-raised-button onclick="window.location.href='/who'" color="primary" >Next Page</button>
+</div>

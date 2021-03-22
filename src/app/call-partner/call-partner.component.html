@@ -1,26 +1,29 @@
-<h1>
+<div class="text">
     Partner: “Did you figure out which of the items doesn't belong to our crime scene?”
-
-
-</h1>
-<h3>
+</div>
+<p>
     Please choose the item that you think is wrongfully on the list:
+</p>
 
-</h3>
+<mat-form-field appearance="fill">
+  <mat-label>Select an option</mat-label>
+  <mat-select [(value)]="selected">
+    <mat-option value="bloodyStone">Bloody Stone</mat-option>
+    <mat-option value="brokenWineGlass">Broken Wine Glass</mat-option>
+    <mat-option value="baseball" >Baseball Bat and Ball</mat-option>
+    <mat-option value="brokenWindow">Broken Window Fragments</mat-option>
+  </mat-select>
+</mat-form-field>
 
-<form name="demo" action="">
-    <label for="items">Choose the item:</label>
-    <select name="items" id="items">
-      <option value="bloodyStone">Bloody Stone</option>
-      <option value="brokenWineGlass">Broken Wine Glass</option>
-      <option value="baseball" id="baseball" name="baseball">Baseball Bat and Ball</option>
-      <option value="brokenWindow">Broken Window Fragments</option>
-    </select>
-    <br><br>
-    <input type="submit" value="Submit" >
-  </form>
 
-<button (click)="submitAnswer()">Confirm</button>
+<section>
+  <div class="example-button-row">
+  <button mat-raised-button (click)="checkAnswer(selected)" >Confirm</button>
+</div>
+</section>
+<div [hidden] = "answer == 'wrong'">
+  <p>Yes! This was the right answer! You can go to the next page:</p>
+  <button mat-raised-button onclick="window.location.href='/problem-solved'" color="primary" >Next Page</button>
+</div>
 
-<button name="confirm" [disabled]= "true" onclick="window.location.href='/problem-solved'" >Next Page</button>
 

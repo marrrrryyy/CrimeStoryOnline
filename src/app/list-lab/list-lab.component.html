@@ -1,7 +1,10 @@
-<table>
+<div class="text">
+  List of Items:
+  <div class="background-box">
+  <table #table [hidden]="viewMode == 'hidden'">
     <tr>
-      <th>Number ID</th>
-      <th>Item</th>
+      <th>Item ID</th>
+      <th>Item Name</th>
     </tr>
     <tr>
       <td>1</td>
@@ -20,4 +23,12 @@
       <td>Broken Window Fragments</td>
     </tr>
   </table>
-<button onclick="window.location.href='/problem'">Back</button>
+</div>
+</div>
+
+<section>
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="loadList()">Load List</button>
+  <button mat-raised-button onclick="window.location.href='/problem'">Back</button>
+</div>
+</section>

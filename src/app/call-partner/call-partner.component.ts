@@ -8,8 +8,11 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./call-partner.component.css']
 })
 export class CallPartnerComponent implements OnInit {
-  @ViewChild("demo") demo!: ElementRef;
-  @ViewChild("baseball") baseball!: ElementRef;
+  answer = "wrong";
+  option="none";
+
+  selected='bloodyStone';
+
 
 
   constructor() { 
@@ -18,15 +21,22 @@ export class CallPartnerComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  submitAnswer() {
-    if (this.baseball.nativeElement.innerHTML === "baseball") {
-      console.log("true");
+  // onKeyUp(value: any) {
+  //   console.log(this.option);
+  //   console.log(value);
+  // }
+
+  // log(x: any) {
+  //   console.log(x);
+  // }
+
+  checkAnswer(selectedAnswer: any) {
+    if(selectedAnswer == "baseball") {
+      this.answer = "right";
+    } else {
+      confirm("Oh, no! This was not the right answer! Try again.");
     }
-    
-
-
   }
-
   
 
 }

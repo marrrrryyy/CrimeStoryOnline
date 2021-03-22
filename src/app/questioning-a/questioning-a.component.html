@@ -1,36 +1,72 @@
-<h1>
+<div class="text">
     Mr Bloomington: “Good evening, detective. I am busy preparing the funeral, so I don’t have much time.
+    <br>
     What is it that you want to ask me?”
-    
-</h1>
-<h3>
-    Where were you at around 12 o’ clock?
-</h3>
-<h5>
-Mr Bloomington: “I already told my story! I was walking in the park.
+</div>
 
-It is nearby so now and then I walk there and then I sit there on a bench, feed some ducks and watch over the lake.
 
-I like it to be silent so I go to a place that is not often visited. Not even around lunch time! I guess that’s why no one could have seen me.”
-</h5>
-<h3>
-We heard that you had a lot of fights with Mrs Bloomington. What was it all about?
-</h3>
-<h5>
-Mr Bloomington: “You heard that from my kids? Yeah, our marriage wasn’t like it used to be.
+<mat-accordion>
+    <mat-expansion-panel 
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            Where were you at around 12 o’ clock?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="text">
+          Mr Bloomington: “I already told my story! I was walking in the park.
+            <br>
+            <br>
+            It is nearby so now and then I walk there and then I sit there on a bench, feed some ducks and watch over the lake.
+            <br>
+            <br>
+            I like it to be silent so I go to a place that is not often visited. Not even around lunch time! I guess that’s why no one could have seen me.”
+      </div>
+    </mat-expansion-panel>
+    <mat-divider></mat-divider>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            We heard that you had a lot of fights with Mrs Bloomington. What was it all about?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="text">
+          Mr Bloomington: “You heard that from my kids? Yeah, our marriage wasn’t like it used to be.
+        <br>
+        <br>
+        Especially not after I found out that she had an affair with one of my friends!
+        <br>
+        <br>
+        It was a few years ago but I still can’t get over it!”
+      </div>
+    </mat-expansion-panel>
+    <mat-divider></mat-divider>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            How did you find Mrs Bloomington?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="text">
+        Mr Bloomington: “When I came back from the walk. I came in from the back and into the living room. There I found her with A LOT of blood.
+        <br>
+        <br>
+        I didn’t know what to do and I honestly can’t remember clearly what I did then. I just know that I checked for a pulse and called 911. But I don’t know what I told them.
+        <br>
+        <br>
+        I just know that I realized pretty quickly that I lost her and that I regret that the last thing we did together was fighting.“
+        
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
 
-Especially not after I found out that she had an affair with one of my friends!
 
-It was a few years ago but I still can’t get over it!”
-</h5>
-<h3>
-How did you find Mrs Bloomington?
-</h3>
-<h5>
-Mr Bloomington: “When I came back from the walk. I came in from the back and into the living room. There I found her with A LOT of blood.
 
-I didn’t know what to do and I honestly can’t remember clearly what I did then. I just know that I checked for a pulse and called 911. But I don’t know what I told them.
-
-I just know that I realized pretty quickly that I lost her and that I regret that the last thing we did together was fighting.“
-</h5>
-<button onclick="window.location.href='./summary-b'">I heard enough</button>
+<section>
+    <div class="example-button-row">
+    <button mat-raised-button onclick="window.location.href='/summary-b'" color="primary" >I heard enough</button>
+</div>
+</section>
