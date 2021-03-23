@@ -28,12 +28,6 @@ div.subtext {
     
 }
 
-div.background-box{
-    background-color: #555555;
-    opacity: 80%;
-    padding: 2%;
-    border-radius: 4px;
-}
 
 button.mat-raised-button {
     padding: 10px 16px;
@@ -57,10 +51,11 @@ mat-radio-button {
     font-size: x-large;
     margin: 1%;
   }
-  mat-expansion-panel div {
+  mat-expansion-panel div, div.background-box {
       background-color: #8d8d8d;
       margin-top: 3%;
       border-radius: 4px;
+      padding: 1%;
   }
 
 
